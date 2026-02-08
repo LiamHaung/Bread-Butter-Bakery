@@ -133,6 +133,14 @@
     function next() {
       goTo(current + 1);
     }
+    function prev() {
+      goTo(current - 1);
+    }
+
+    var prevBtn = carousel.querySelector('.carousel-btn--prev');
+    var nextBtn = carousel.querySelector('.carousel-btn--next');
+    if (prevBtn) prevBtn.addEventListener('click', function () { prev(); resetAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { next(); resetAutoplay(); });
 
     dots.forEach(function (dot, i) {
       dot.addEventListener('click', function () {
@@ -175,6 +183,14 @@
     function next() {
       goTo(current + 1);
     }
+    function prev() {
+      goTo(current - 1);
+    }
+
+    var prevBtn = carousel.querySelector('.carousel-btn--prev');
+    var nextBtn = carousel.querySelector('.carousel-btn--next');
+    if (prevBtn) prevBtn.addEventListener('click', function () { prev(); resetAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { next(); resetAutoplay(); });
 
     dots.forEach(function (dot, i) {
       dot.addEventListener('click', function () {

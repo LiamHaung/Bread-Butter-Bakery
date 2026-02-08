@@ -402,9 +402,27 @@ main {
 /* ----- Mockups (placeholder blocks) ----- */
 /* ----- Logo 輪播（三張） ----- */
 .logo-carousel {
+  position: relative;
   margin-bottom: var(--space);
   border-radius: var(--radius);
   overflow: hidden;
+}
+
+.logo-carousel-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  pointer-events: none;
+}
+
+.logo-carousel-nav .carousel-btn {
+  pointer-events: auto;
 }
 
 .logo-carousel-track {
@@ -453,11 +471,64 @@ main {
   transform: scale(1.2);
 }
 
+/* ----- 輪播左右按鈕（Logo / Map 共用） ----- */
+.carousel-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid rgba(45, 56, 50, 0.2);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(45, 56, 50, 0.1);
+}
+
+.carousel-btn:hover {
+  background: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(45, 56, 50, 0.15);
+}
+
+.carousel-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-light);
+}
+
+.carousel-btn span {
+  display: block;
+  margin-top: -0.1em;
+}
+
 /* ----- 伴手禮地圖輪播（五張 map1–5.jpg） ----- */
 .map-carousel {
+  position: relative;
   margin-bottom: var(--space);
   border-radius: var(--radius);
   overflow: hidden;
+}
+
+.map-carousel-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  pointer-events: none;
+}
+
+.map-carousel-nav .carousel-btn {
+  pointer-events: auto;
 }
 
 .map-carousel-track {
