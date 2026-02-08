@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>礁溪奶油麵包｜品牌形象與體驗升級提案</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 入口頁：九宮格奶油麵包動態點亮，1.8s 後停頓 1.5s 進入主頁 -->
+  <div class="entrance" id="entrance" aria-hidden="false">
+    <div class="entrance-bread" aria-hidden="true">
+      <div class="entrance-grid">
+        <div class="entrance-cell" data-index="0"></div>
+        <div class="entrance-cell" data-index="1"></div>
+        <div class="entrance-cell" data-index="2"></div>
+        <div class="entrance-cell" data-index="3"></div>
+        <div class="entrance-cell" data-index="4"></div>
+        <div class="entrance-cell" data-index="5"></div>
+        <div class="entrance-cell" data-index="6"></div>
+        <div class="entrance-cell" data-index="7"></div>
+        <div class="entrance-cell" data-index="8"></div>
+      </div>
+    </div>
+    <p class="entrance-brand">Bread & Butter Bakery</p>
+    <p class="entrance-eyebrow">品牌體驗升級提案</p>
+  </div>
+
+  <!-- 水彩 × 霧面質感圖層（不阻擋點擊） -->
+  <div class="texture texture--paper" aria-hidden="true"></div>
+  <div class="texture texture--watercolor" aria-hidden="true"></div>
+  <main>
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-brand hero-anim">Bread & Butter Bakery</p>
+        <p class="hero-eyebrow hero-anim">品牌體驗升級提案</p>
+        <img src="assets/images/hero-img.png" alt="" class="hero-img hero-anim" width="400" height="240">
+        <h1 class="hero-title hero-anim">山嵐裡的奶油香</h1>
+        <p class="hero-tagline hero-anim">當法式靈魂遇上宜蘭慢活</p>
+        <div class="hero-intro hero-anim">
+          <p>我們不只販售麵包，更販售一種生活態度。</p>
+          <p>本計畫旨在將「礁溪奶油麵包」從在地烘焙坊，升級為旅人必訪的「法式味覺地標」。透過視覺、觸覺與互動體驗的細節重塑，讓顧客帶走的每一份伴手禮，都是一段關於礁溪的美味記憶。</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="section-divider" aria-hidden="true">
+      <img src="assets/images/section-divider.png" alt="" width="320" height="32">
+    </div>
+
+    <!-- Section 01: Visual Identity -->
+    <section class="section" id="visual-identity">
+      <span class="section-num" aria-hidden="true">01</span>
+      <h2 class="section-title">Logo 與基礎識別</h2>
+      <div class="section-content">
+        <div class="logo-concept">
+          <div class="logo-carousel" aria-label="Logo 輪播">
+            <div class="logo-carousel-track">
+              <div class="logo-carousel-slide">
+                <img src="assets/images/logo-1.jpg" alt="Logo 示意 1" width="600" height="400">
+              </div>
+              <div class="logo-carousel-slide">
+                <img src="assets/images/logo-2.jpg" alt="Logo 示意 2" width="600" height="400">
+              </div>
+              <div class="logo-carousel-slide">
+                <img src="assets/images/logo.jpg" alt="Logo 示意 3" width="600" height="400">
+              </div>
+            </div>
+            <div class="logo-carousel-dots" role="tablist" aria-label="輪播頁籤">
+              <button type="button" class="logo-carousel-dot is-active" aria-label="第 1 張" data-index="0" aria-selected="true"></button>
+              <button type="button" class="logo-carousel-dot" aria-label="第 2 張" data-index="1" aria-selected="false"></button>
+              <button type="button" class="logo-carousel-dot" aria-label="第 3 張" data-index="2" aria-selected="false"></button>
+            </div>
+          </div>
+          <h3 class="logo-concept-title">在山水氤氳間，烘焙一份有溫度的日常</h3>
+          <p>在礁溪，生活總是被山嵐、雨水與氤氳的溫泉霧氣所包圍。這裡的濕氣與溫度，不僅養成了土地的豐饒，也醞釀了我們對「味道」的堅持。</p>
+          <blockquote class="pullquote">「因為自己真的愛吃，所以想讓你也品嚐這份幸福。」</blockquote>
+          <p>這份初衷很單純，卻是我們最珍視的核心。奶油麵包的存在，不是為了追求喧囂的市場表現，而是想成為這個城鎮裡，一個安靜、溫暖且能長久陪伴的存在。</p>
+          <p>在這次品牌識別的重製中，我們選擇不創造陌生的符號，而是取材自在地的記憶。</p>
+          <div class="logo-concept-cards">
+            <div class="logo-concept-card">
+              <h4 class="logo-concept-card-title">手作的揉捻</h4>
+              <p class="logo-concept-card-desc">視覺中保留烘焙時的有機線條，傳遞掌心與麵糰接觸時的力道與溫度。</p>
+            </div>
+            <div class="logo-concept-card">
+              <h4 class="logo-concept-card-title">地方的語言</h4>
+              <p class="logo-concept-card-desc">將宜蘭特有的自然氣息——那抹雨後的灰綠、那片如霧般的朦朧，轉化為視覺的基調。</p>
+            </div>
+            <div class="logo-concept-card">
+              <h4 class="logo-concept-card-title">食材的純粹</h4>
+              <p class="logo-concept-card-desc">對於食材的挑選，是我們對這片土地最直接的致敬。</p>
+            </div>
+          </div>
+          <p>我們相信，好的設計與好的麵包一樣，不需要華麗的辭藻與繁複的裝飾，只需誠實地反應生活。我們不急著討好，只想透過每一口發酵的香氣，替品牌找到一個「被理解、被記住」的方式，緩緩地走進你的日常。</p>
+        </div>
+        <div class="color-palette">
+          <h3>色彩計畫 (Color Palette)</h3>
+          <ul class="palette-list">
+            <li>
+              <span class="palette-swatch" style="--swatch: #C4A35A;"></span>
+              <span class="palette-name">焦糖金 (Burnt Butter)</span>
+              <span class="palette-desc">傳遞「自己愛吃」的初心，麵包出爐瞬間的幸福香氣。</span>
+            </li>
+            <li>
+              <span class="palette-swatch" style="--swatch: #7B9AA8;"></span>
+              <span class="palette-name">迷霧藍 (Misty Blue)</span>
+              <span class="palette-desc">礁溪特有的山嵐、雨水與溫泉霧氣。</span>
+            </li>
+            <li>
+              <span class="palette-swatch" style="--swatch: #8B7355;"></span>
+              <span class="palette-name">大地棕 (Kraft Brown)</span>
+              <span class="palette-desc">土地的根基與麵粉沾手的手作溫度。</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">
+      <img src="assets/images/section-divider.png" alt="" width="320" height="32">
+    </div>
+
+    <!-- Section 02: Interactive Experience -->
+    <section class="section section-alt" id="interactive-experience">
+      <span class="section-num" aria-hidden="true">02</span>
+      <h2 class="section-title">禮盒互動小卡 (3款)</h2>
+      <div class="section-content">
+        <blockquote class="pullquote">「禮盒裡的秘密情書：互動小卡組」</blockquote>
+        <p class="interactive-intro">包裝不只是保護，更是溝通的開始。我們將原有的包裝預算轉化為三款互動小卡，創造驚喜的開箱瞬間：</p>
+        <div class="interactive-cards">
+          <div class="interactive-card-item">
+            <div class="interactive-card-img-wrap" tabindex="0" role="button" aria-label="點擊翻面">
+              <div class="interactive-card-inner">
+                <div class="card-face card-face--front">
+                  <img src="assets/images/card-flavor-note.png" alt="味覺回憶卡 正面" width="240" height="320">
+                </div>
+                <div class="card-face card-face--back">
+                  <img src="assets/images/card-flavor-note-back.png" alt="味覺回憶卡 背面" width="240" height="320">
+                </div>
+              </div>
+              <span class="card-flip-hint" aria-hidden="true">觸碰翻面</span>
+              <span class="card-flip-hint card-flip-hint--back" aria-hidden="true">觸碰翻回</span>
+            </div>
+            <h3 class="interactive-card-title">❶ 山霧之禮｜靜謐與深度的祝福</h3>
+            <p class="interactive-card-subtitle">（對應：松露意象款）</p>
+            <div class="interactive-card-desc">
+              <p>像清晨的礁溪山嵐，霧氣緩緩走過林間與屋瓦，不喧嘩，卻層次豐富。</p>
+              <p>這是一張帶著沉穩氣息的小卡——象徵內在的厚度、時間的醞釀、與被細細對待的心意。</p>
+              <p>適合送給值得慢慢品味的人，願他在日常裡，也能被溫柔款待。</p>
+              <div class="interactive-card-tags">
+              <span class="tag">山嵐</span>
+              <span class="tag">靜氣</span>
+              <span class="tag">餘韻</span>
+              <span class="tag">深度</span>
+            </div>
+            </div>
+          </div>
+          <div class="interactive-card-item">
+            <div class="interactive-card-img-wrap" tabindex="0" role="button" aria-label="點擊翻面">
+              <div class="interactive-card-inner">
+                <div class="card-face card-face--front">
+                  <img src="assets/images/card-craft.png" alt="職人對話卡 正面" width="240" height="320">
+                </div>
+                <div class="card-face card-face--back">
+                  <img src="assets/images/card-craft-back.png" alt="職人對話卡 背面" width="240" height="320">
+                </div>
+              </div>
+              <span class="card-flip-hint" aria-hidden="true">觸碰翻面</span>
+              <span class="card-flip-hint card-flip-hint--back" aria-hidden="true">觸碰翻回</span>
+            </div>
+            <h3 class="interactive-card-title">❷ 海風之禮｜豐盛與相遇的祝福</h3>
+            <p class="interactive-card-subtitle">（對應：烏魚子意象款）</p>
+            <div class="interactive-card-desc">
+              <p>來自海與土地交會的風味記憶，像蘭陽平原吹來的鹹甜氣息，帶著陽光、帶著收穫，也帶著人情味。</p>
+              <p>這張卡象徵的是——分享、團聚、與被記住的滋味。</p>
+              <p>把祝福送進彼此的生活裡，讓每一次相遇，都多一點份量。</p>
+              <div class="interactive-card-tags">
+              <span class="tag">海風</span>
+              <span class="tag">收成</span>
+              <span class="tag">豐足</span>
+              <span class="tag">相逢</span>
+            </div>
+            </div>
+          </div>
+          <div class="interactive-card-item">
+            <div class="interactive-card-img-wrap" tabindex="0" role="button" aria-label="點擊翻面">
+              <div class="interactive-card-inner">
+                <div class="card-face card-face--front">
+                  <img src="assets/images/card-social-frame.png" alt="透卡／拍照框 正面" width="240" height="320">
+                </div>
+                <div class="card-face card-face--back">
+                  <img src="assets/images/card-social-frame-back.png" alt="透卡／拍照框 背面" width="240" height="320">
+                </div>
+              </div>
+              <span class="card-flip-hint" aria-hidden="true">觸碰翻面</span>
+              <span class="card-flip-hint card-flip-hint--back" aria-hidden="true">觸碰翻回</span>
+            </div>
+            <h3 class="interactive-card-title">❸ 湯煙之禮｜溫暖與陪伴的祝福</h3>
+            <p class="interactive-card-subtitle">（對應：綜合款）</p>
+            <div class="interactive-card-desc">
+              <p>像礁溪溫泉升起的白煙，柔軟地包覆旅人與街道。</p>
+              <p>這是一份最貼近日常的祝福——不張揚，但始終在身邊。</p>
+              <p>象徵著陪伴、安心、與被接住的感受。就像一份什麼時候打開，都剛剛好的溫度。</p>
+              <div class="interactive-card-tags">
+              <span class="tag">溫泉煙氣</span>
+              <span class="tag">療癒</span>
+              <span class="tag">包覆</span>
+              <span class="tag">安心</span>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">
+      <img src="assets/images/section-divider.png" alt="" width="320" height="32">
+    </div>
+
+    <!-- Section 03: Souvenir Map -->
+    <section class="section" id="souvenir-map">
+      <span class="section-num" aria-hidden="true">03</span>
+      <h2 class="section-title">奶油麵包店指引設計</h2>
+      <div class="section-content">
+        <p class="map-subtitle">循著麵包香，走進 Bread & Butter Bakery</p>
+        <div class="map-carousel" aria-label="伴手禮地圖輪播">
+          <div class="map-carousel-track">
+            <div class="map-carousel-slide">
+              <img src="assets/images/map1.jpg" alt="伴手禮地圖 1" width="600" height="400">
+            </div>
+            <div class="map-carousel-slide">
+              <img src="assets/images/map2.jpg" alt="伴手禮地圖 2" width="600" height="400">
+            </div>
+            <div class="map-carousel-slide">
+              <img src="assets/images/map3.jpg" alt="伴手禮地圖 3" width="600" height="400">
+            </div>
+            <div class="map-carousel-slide">
+              <img src="assets/images/map4.jpg" alt="伴手禮地圖 4" width="600" height="400">
+            </div>
+            <div class="map-carousel-slide">
+              <img src="assets/images/map5.jpg" alt="伴手禮地圖 5" width="600" height="400">
+            </div>
+          </div>
+          <div class="map-carousel-dots" role="tablist" aria-label="輪播頁籤">
+            <button type="button" class="map-carousel-dot is-active" aria-label="第 1 張" data-index="0" aria-selected="true"></button>
+            <button type="button" class="map-carousel-dot" aria-label="第 2 張" data-index="1" aria-selected="false"></button>
+            <button type="button" class="map-carousel-dot" aria-label="第 3 張" data-index="2" aria-selected="false"></button>
+            <button type="button" class="map-carousel-dot" aria-label="第 4 張" data-index="3" aria-selected="false"></button>
+            <button type="button" class="map-carousel-dot" aria-label="第 5 張" data-index="4" aria-selected="false"></button>
+          </div>
+        </div>
+        <div class="map-guide-cols">
+          <div class="map-guide-col map-guide-col--gold">
+            <h4 class="map-guide-col-title">烘焙選購區（焦糖金）</h4>
+            <p class="map-guide-col-desc">以手繪餐包圖示標註，引導至幸福味道的源頭。</p>
+          </div>
+          <div class="map-guide-col map-guide-col--brown">
+            <h4 class="map-guide-col-title">伴手禮選品區（大地棕）</h4>
+            <p class="map-guide-col-desc">標示為「在地的記憶」，強調食材堅持與職人選物的質樸質感。</p>
+          </div>
+          <div class="map-guide-col map-guide-col--blue">
+            <h4 class="map-guide-col-title">內用區（迷霧藍）</h4>
+            <p class="map-guide-col-desc">用溫泉霧氣般的色調，營造如同山嵐包圍的安靜角落。</p>
+          </div>
+        </div>
+        <p class="map-tag-wrap">
+          <span class="tag map-tag">地貼材質選用低反光的霧面噴砂，與店內既有材質自然共生，落實「不急著討好市場」的品牌性格。</span>
+        </p>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">
+      <img src="assets/images/section-divider.png" alt="" width="320" height="32">
+    </div>
+
+    <!-- Section 04: Key Visual -->
+    <section class="section section-alt" id="key-visual">
+      <span class="section-num" aria-hidden="true">04</span>
+      <h2 class="section-title">大型看板製作</h2>
+      <div class="section-content">
+        <div class="kv-mockup">
+          <img src="assets/images/brand.jpg" alt="街頭形象看板：極簡戶外看板，巨大奶油捲特寫與一句文案" class="kv-img" width="800" height="450">
+        </div>
+        <h3 class="kv-title">這是一個品牌與遊客重要的「初次見面」的時刻。</h3>
+        <div class="kv-body">
+          <dl class="kv-specs">
+            <dt>有機的手繪感：</dt>
+            <dd>捨棄冰冷的攝影照片，改以具備手感線條的插畫呈現標誌性的餐包。這種揉捻過的有機線條能傳遞掌心的溫度，第一時間建立「手作感」的品牌聯想。</dd>
+            <dt>直觀的指引：</dt>
+            <dd>插畫中的指引動作，將原本生硬的交通告示轉化為趣味的互動。它像是一個在地老友的熱情邀約，不急著討好，卻讓人不自覺想跟隨。</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">
+      <img src="assets/images/section-divider.png" alt="" width="320" height="32">
+    </div>
+
+    <!-- Quotation -->
+    <section class="section quotation" id="quotation">
+      <span class="section-num" aria-hidden="true">報價</span>
+      <h2 class="section-title">專案報價</h2>
+      <div class="section-content">
+        <p class="quotation-intro">專案名稱：礁溪奶油麵包｜品牌形象與體驗升級</p>
+        <div class="table-wrap">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>項目 (Project Item)</th>
+                <th>規格與執行內容 (Description)</th>
+                <th>優惠費用 (TWD)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1. Logo 與基礎識別</td>
+                <td>品牌標誌設計(1款精選)、標準字/色定調</td>
+                <td class="price">$11,000</td>
+              </tr>
+              <tr>
+                <td>2. 禮盒互動小卡 (3款)</td>
+                <td>包含「A款」、「Ｂ款」、「Ｃ款」三款版面設計</td>
+                <td class="price">$7,500</td>
+              </tr>
+              <tr>
+                <td>3. 伴手禮指引地圖 + 地貼設計</td>
+                <td>手繪風格地圖繪製、景點整合、地貼設計</td>
+                <td class="price">$6,000</td>
+              </tr>
+              <tr>
+                <td>4. 大型看板製作</td>
+                <td>戶外看板視覺與製作</td>
+                <td class="price">$5,000</td>
+              </tr>
+              <tr class="total-row">
+                <td colspan="2">總計 (Total)</td>
+                <td class="price">$28,500</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">
+      <img src="assets/images/section-divider.png" alt="" width="320" height="32">
+    </div>
+
+    <!-- Timeline：甘特圖 -->
+    <section class="section timeline" id="timeline">
+      <span class="section-num" aria-hidden="true">時程</span>
+      <h2 class="section-title">執行時程規劃</h2>
+      <div class="section-content">
+        <p class="timeline-range">專案期間：2026/02/12 － 2026/03/05（共 22 個工作天）</p>
+        <p>為確保 3/5 前能順利產出成品，我們將採取<strong>「衝刺式設計流程 (Design Sprint)」</strong>，敬請配合各節點確認。</p>
+        <div class="gantt-wrap">
+          <div class="gantt-axis" aria-hidden="true">
+            <span class="gantt-axis-label">2/12</span>
+            <span class="gantt-axis-label">2/19</span>
+            <span class="gantt-axis-label">2/26</span>
+            <span class="gantt-axis-label">3/5</span>
+          </div>
+          <div class="gantt-track">
+            <div class="gantt-bar gantt-bar--phase1" style="--start: 0; --len: 7;" title="第一週 2/12-2/18">
+              <span class="gantt-bar-label">第一週 啟動與定調</span>
+            </div>
+          </div>
+          <div class="gantt-task">
+            <span class="gantt-task-name">專案啟動，確認圖片素材</span>
+            <div class="gantt-task-bar-wrap">
+              <div class="gantt-task-bar" style="--start: 0; --len: 1;"></div>
+              <span class="gantt-task-date">2/12</span>
+            </div>
+          </div>
+          <div class="gantt-task">
+            <span class="gantt-task-name">Logo 初稿與色彩系統</span>
+            <div class="gantt-task-bar-wrap">
+              <div class="gantt-task-bar" style="--start: 3; --len: 1;"></div>
+              <span class="gantt-task-date">2/15</span>
+            </div>
+          </div>
+          <div class="gantt-task">
+            <span class="gantt-task-name">Logo 定案</span>
+            <div class="gantt-task-bar-wrap">
+              <div class="gantt-task-bar" style="--start: 6; --len: 1;"></div>
+              <span class="gantt-task-date">2/18</span>
+            </div>
+          </div>
+          <div class="gantt-track">
+            <div class="gantt-bar gantt-bar--phase2" style="--start: 7; --len: 7;" title="第二週 2/19-2/25">
+              <span class="gantt-bar-label">第二週 設計展開</span>
+            </div>
+          </div>
+          <div class="gantt-task">
+            <span class="gantt-task-name">互動小卡、指引地圖初稿</span>
+            <div class="gantt-task-bar-wrap">
+              <div class="gantt-task-bar" style="--start: 7; --len: 1;"></div>
+              <span class="gantt-task-date">2/19</span>
+            </div>
+          </div>
+          <div class="gantt-task">
+            <span class="gantt-task-name">形象海報初稿</span>
+            <div class="gantt-task-bar-wrap">
+              <div class="gantt-task-bar" style="--start: 9; --len: 1;"></div>
+              <span class="gantt-task-date">2/21</span>
+            </div>
+          </div>
+          <div class="gantt-task">
+            <span class="gantt-task-name">設計修改完成、最後校對</span>
+            <div class="gantt-task-bar-wrap">
+              <div class="gantt-task-bar" style="--start: 13; --len: 1;"></div>
+              <span class="gantt-task-date">2/25</span>
+            </div>
+          </div>
+          <div class="gantt-track">
+            <div class="gantt-bar gantt-bar--phase3" style="--start: 14; --len: 8;" title="第三週 2/26-3/5">
+              <span class="gantt-bar-label">第三週 完稿與製作</span>
+            </div>
+          </div>
+          <div class="gantt-task">
+            <span class="gantt-task-name">全數定稿（關鍵節點）</span>
+            <div class="gantt-task-bar-wrap">
+              <div class="gantt-task-bar gantt-task-bar--key" style="--start: 14; --len: 1;"></div>
+              <span class="gantt-task-date">2/26</span>
+            </div>
+          </div>
+          <div class="gantt-task">
+            <span class="gantt-task-name">檔案交付印刷廠發印</span>
+            <div class="gantt-task-bar-wrap">
+              <div class="gantt-task-bar" style="--start: 15; --len: 1;"></div>
+              <span class="gantt-task-date">2/27</span>
+            </div>
+          </div>
+          <div class="gantt-task">
+            <span class="gantt-task-name">印刷製作期（急件）</span>
+            <div class="gantt-task-bar-wrap">
+              <div class="gantt-task-bar" style="--start: 16; --len: 5;"></div>
+              <span class="gantt-task-date">2/28-3/4</span>
+            </div>
+          </div>
+          <div class="gantt-task">
+            <span class="gantt-task-name">成品交付／結案</span>
+            <div class="gantt-task-bar-wrap">
+              <div class="gantt-task-bar" style="--start: 21; --len: 1;"></div>
+              <span class="gantt-task-date">3/5</span>
+            </div>
+          </div>
+        </div>
+        <div class="gantt-legend">
+          <span class="gantt-legend-item"><i class="gantt-legend-dot gantt-legend-dot--1"></i> 第一週</span>
+          <span class="gantt-legend-item"><i class="gantt-legend-dot gantt-legend-dot--2"></i> 第二週</span>
+          <span class="gantt-legend-item"><i class="gantt-legend-dot gantt-legend-dot--3"></i> 第三週</span>
+          <span class="gantt-legend-item"><i class="gantt-legend-dot gantt-legend-dot--key"></i> 關鍵節點</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer-zh">讓山嵐包圍生活，讓麥香溫暖記憶。</p>
+      <p class="footer-quote">Mist-shrouded life, bread-scented memories.</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
