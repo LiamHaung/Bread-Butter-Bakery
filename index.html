@@ -6,8 +6,10 @@
   <title>礁溪奶油麵包｜品牌形象與體驗升級提案</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Lato:wght@300;400&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
   <!-- 入口頁：九宮格奶油麵包動態點亮，1.8s 後停頓 1.5s 進入主頁 -->
@@ -25,7 +27,7 @@
         <div class="entrance-cell" data-index="8"></div>
       </div>
     </div>
-    <p class="entrance-brand">Bread & Butter Bakery</p>
+    <p class="entrance-brand">Bread & Butter</p>
     <p class="entrance-eyebrow">品牌體驗升級提案</p>
   </div>
 
@@ -33,21 +35,71 @@
   <div class="texture texture--paper" aria-hidden="true"></div>
   <div class="texture texture--watercolor" aria-hidden="true"></div>
   <main>
-    <!-- Hero Section -->
-    <header class="hero" id="hero">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-content">
-        <p class="hero-brand hero-anim">Bread & Butter Bakery</p>
-        <p class="hero-eyebrow hero-anim">品牌體驗升級提案</p>
-        <img src="assets/images/hero-img.png" alt="" class="hero-img hero-anim" width="400" height="240">
-        <h1 class="hero-title hero-anim">山嵐裡的奶油香</h1>
-        <p class="hero-tagline hero-anim">當法式靈魂遇上宜蘭慢活</p>
-        <div class="hero-intro hero-anim">
-          <p>我們不只販售麵包，更販售一種生活態度。</p>
-          <p>本計畫旨在將「礁溪奶油麵包」從在地烘焙坊，升級為旅人必訪的「法式味覺地標」。透過視覺、觸覺與互動體驗的細節重塑，讓顧客帶走的每一份伴手禮，都是一段關於礁溪的美味記憶。</p>
-        </div>
+    <nav class="site-nav" aria-label="主導覽">
+      <div class="site-nav-logo">THE BREAD & BUTTER</div>
+    </nav>
+
+    <!-- Hero Section（復刻設計圖風格） -->
+    <header class="hero hero--new" id="hero">
+      <div class="hero-deco hero-deco--tr" aria-hidden="true">
+        <img src="assets/images/illus-1.png" alt="" width="100" height="100">
+      </div>
+      <div class="hero-deco hero-deco--bl" aria-hidden="true">
+        <img src="assets/images/illus-1.png" alt="" width="90" height="90">
+      </div>
+      <div class="hero-deco hero-deco--tl" aria-hidden="true">
+        <img src="assets/images/illus-2.png" alt="" width="95" height="95">
+      </div>
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
+        <div class="hero-eng-title">Bread & Butter</div>
+        <div class="hero-sub">品牌體驗升級提案</div>
+        <img src="assets/images/hero-img.png" class="hero-image" alt="奶油麵包" width="250" height="250">
+        <h1 class="hero-title">來這裡，帶走一片南法的慵懶愜意。</h1>
       </div>
     </header>
+
+    <!-- 品牌故事：三張 Card 說故事 -->
+    <section class="brand-story" aria-label="品牌故事">
+      <div class="brand-story-deco brand-story-deco--r" aria-hidden="true">
+        <img src="assets/images/illus-1.png" alt="" width="80" height="80">
+      </div>
+      <div class="brand-story-deco brand-story-deco--l" aria-hidden="true">
+        <img src="assets/images/illus-2.png" alt="" width="75" height="75">
+      </div>
+      <div class="brand-story-inner">
+        <!-- Card 1：源起 -->
+        <article class="story-card story-card--origin" data-aos="fade-up" data-aos-duration="1000">
+          <span class="story-card-num" aria-hidden="true">01</span>
+          <h2 class="story-card-title">源起於海風邊的溫度手作</h2>
+          <div class="story-card-body">
+            <p class="story-drop-cap">十年前，奶油麵包（The Bread & Butter）在頭城的海邊發酵。</p>
+            <p>那時我們就明白，好吃的麵包不能催，就像宜蘭人的日子，順著海風與潮汐踏著緩緩的節奏。這是我們與生俱來的 DNA。</p>
+          </div>
+        </article>
+
+        <!-- Card 2：平行時空 -->
+        <article class="story-card story-card--soul" data-aos="fade-up" data-aos-duration="1000">
+          <span class="story-card-num" aria-hidden="true">02</span>
+          <h2 class="story-card-title">平行時空的慵懶靈魂</h2>
+          <div class="story-card-body">
+            <p>從頭城海岸走到礁溪山腳，我們發現，宜蘭這片依山傍海的土地，不被都市霓虹打擾的寧靜，與地球彼端的南法普羅旺斯，連成一線。</p>
+            <p class="story-quote">懂得生活的人，總會在山與海之間，找到同樣的棲息地。</p>
+            <p>我們深信，生活的質感不在於身處何處，而在於對待時間的方式。不需刻意模仿，因為當我們放慢腳步，專注於揉入麵團的溫度、靜待發酵的耐心時，宜蘭的日光與普羅旺斯的陽光，便有了相同的暖意。</p>
+            <p>在宜蘭的土地上，用最舒適的慢步調，烘焙出那份跨越海洋的法式優雅。</p>
+          </div>
+        </article>
+
+        <!-- Card 3：鬆弛感 -->
+        <article class="story-card story-card--vision" data-aos="fade-up" data-aos-duration="1000">
+          <span class="story-card-num story-card-num--light" aria-hidden="true">03</span>
+          <h2 class="story-card-title story-card-title--light">一起找回生活的「鬆弛感」</h2>
+          <div class="story-card-body story-card-body--light">
+            <p>這裡不屬於誰的後花園，而是讓靈魂落腳的豐饒之地。</p>
+            <p>來到礁溪奶油麵包，我們販售的不只是熱騰騰的烘焙，更是一種「歲月靜好」的愜意。</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
     <div class="section-divider" aria-hidden="true">
       <img src="assets/images/section-divider.png" alt="" width="320" height="32">
@@ -85,26 +137,37 @@
               <button type="button" class="logo-carousel-dot" aria-label="第 3 張" data-index="2" aria-selected="false"></button>
             </div>
           </div>
-          <h3 class="logo-concept-title">在山水氤氳間，烘焙一份有溫度的日常</h3>
-          <p>在礁溪，生活總是被山嵐、雨水與氤氳的溫泉霧氣所包圍。這裡的濕氣與溫度，不僅養成了土地的豐饒，也醞釀了我們對「味道」的堅持。</p>
-          <blockquote class="pullquote">「因為自己真的愛吃，所以想讓你也品嚐這份幸福。」</blockquote>
-          <p>這份初衷很單純，卻是我們最珍視的核心。奶油麵包的存在，不是為了追求喧囂的市場表現，而是想成為這個城鎮裡，一個安靜、溫暖且能長久陪伴的存在。</p>
-          <p>在這次品牌識別的重製中，我們選擇不創造陌生的符號，而是取材自在地的記憶。</p>
-          <div class="logo-concept-cards">
-            <div class="logo-concept-card">
-              <h4 class="logo-concept-card-title">手作的揉捻</h4>
-              <p class="logo-concept-card-desc">視覺中保留烘焙時的有機線條，傳遞掌心與麵糰接觸時的力道與溫度。</p>
-            </div>
-            <div class="logo-concept-card">
-              <h4 class="logo-concept-card-title">地方的語言</h4>
-              <p class="logo-concept-card-desc">將宜蘭特有的自然氣息——那抹雨後的灰綠、那片如霧般的朦朧，轉化為視覺的基調。</p>
-            </div>
-            <div class="logo-concept-card">
-              <h4 class="logo-concept-card-title">食材的純粹</h4>
-              <p class="logo-concept-card-desc">對於食材的挑選，是我們對這片土地最直接的致敬。</p>
+          <!-- 品牌核心三環圖 Venn -->
+          <div class="logo-concept-venn" data-aos="fade-up" data-aos-duration="1000">
+            <h3 class="venn-heading">THE BRAND CORE</h3>
+            <div class="venn-container">
+              <div class="venn-circle venn-circle--top">
+                <div class="venn-circle-content">
+                  <i class="fa-solid fa-mountain-sun venn-icon" aria-hidden="true"></i>
+                  <h4 class="venn-title">宜蘭山海息</h4>
+                  <p>太平洋的風與礁溪的霧。<br>宜蘭風土，是滋養法式靈魂的沃土。</p>
+                </div>
+              </div>
+              <div class="venn-circle venn-circle--left">
+                <div class="venn-circle-content">
+                  <i class="fa-solid fa-wine-glass venn-icon" aria-hidden="true"></i>
+                  <h4 class="venn-title">南法鬆弛感</h4>
+                  <p>懂得浪費時間，才是奢侈。<br>用一頓下午茶，找回生活的愜意。</p>
+                </div>
+              </div>
+              <div class="venn-circle venn-circle--right">
+                <div class="venn-circle-content">
+                  <i class="fa-solid fa-wheat-awn venn-icon" aria-hidden="true"></i>
+                  <h4 class="venn-title">日光手作溫</h4>
+                  <p>不催熟的發酵，不妥協的食材。<br>在麵包裡揉進太陽的溫度。</p>
+                </div>
+              </div>
+              <div class="venn-brand-core">
+                <span class="venn-core-label">THE ESSENCE</span>
+                <strong class="venn-core-title">三大元素</strong>
+              </div>
             </div>
           </div>
-          <p>我們相信，好的設計與好的麵包一樣，不需要華麗的辭藻與繁複的裝飾，只需誠實地反應生活。我們不急著討好，只想透過每一口發酵的香氣，替品牌找到一個「被理解、被記住」的方式，緩緩地走進你的日常。</p>
         </div>
         <div class="color-palette">
           <h3>色彩計畫 (Color Palette)</h3>
@@ -133,109 +196,12 @@
       <img src="assets/images/section-divider.png" alt="" width="320" height="32">
     </div>
 
-    <!-- Section 02: Interactive Experience -->
-    <section class="section section-alt" id="interactive-experience">
-      <span class="section-num" aria-hidden="true">02</span>
-      <h2 class="section-title">禮盒互動小卡 (3款)</h2>
-      <div class="section-content">
-        <blockquote class="pullquote">「禮盒裡的秘密情書：互動小卡組」</blockquote>
-        <p class="interactive-intro">包裝不只是保護，更是溝通的開始。我們將原有的包裝預算轉化為三款互動小卡，創造驚喜的開箱瞬間：</p>
-        <div class="interactive-cards">
-          <div class="interactive-card-item">
-            <div class="interactive-card-img-wrap" tabindex="0" role="button" aria-label="點擊翻面">
-              <div class="interactive-card-inner">
-                <div class="card-face card-face--front">
-                  <img src="assets/images/card-flavor-note.png" alt="味覺回憶卡 正面" width="240" height="320">
-                </div>
-                <div class="card-face card-face--back">
-                  <img src="assets/images/card-flavor-note-back.png" alt="味覺回憶卡 背面" width="240" height="320">
-                </div>
-              </div>
-              <span class="card-flip-hint" aria-hidden="true">觸碰翻面</span>
-              <span class="card-flip-hint card-flip-hint--back" aria-hidden="true">觸碰翻回</span>
-            </div>
-            <h3 class="interactive-card-title">❶ 山霧之禮｜靜謐與深度的祝福</h3>
-            <p class="interactive-card-subtitle">（對應：松露意象款）</p>
-            <div class="interactive-card-desc">
-              <p>像清晨的礁溪山嵐，霧氣緩緩走過林間與屋瓦，不喧嘩，卻層次豐富。</p>
-              <p>這是一張帶著沉穩氣息的小卡——象徵內在的厚度、時間的醞釀、與被細細對待的心意。</p>
-              <p>適合送給值得慢慢品味的人，願他在日常裡，也能被溫柔款待。</p>
-              <div class="interactive-card-tags">
-              <span class="tag">山嵐</span>
-              <span class="tag">靜氣</span>
-              <span class="tag">餘韻</span>
-              <span class="tag">深度</span>
-            </div>
-            </div>
-          </div>
-          <div class="interactive-card-item">
-            <div class="interactive-card-img-wrap" tabindex="0" role="button" aria-label="點擊翻面">
-              <div class="interactive-card-inner">
-                <div class="card-face card-face--front">
-                  <img src="assets/images/card-craft.png" alt="職人對話卡 正面" width="240" height="320">
-                </div>
-                <div class="card-face card-face--back">
-                  <img src="assets/images/card-craft-back.png" alt="職人對話卡 背面" width="240" height="320">
-                </div>
-              </div>
-              <span class="card-flip-hint" aria-hidden="true">觸碰翻面</span>
-              <span class="card-flip-hint card-flip-hint--back" aria-hidden="true">觸碰翻回</span>
-            </div>
-            <h3 class="interactive-card-title">❷ 海風之禮｜豐盛與相遇的祝福</h3>
-            <p class="interactive-card-subtitle">（對應：烏魚子意象款）</p>
-            <div class="interactive-card-desc">
-              <p>來自海與土地交會的風味記憶，像蘭陽平原吹來的鹹甜氣息，帶著陽光、帶著收穫，也帶著人情味。</p>
-              <p>這張卡象徵的是——分享、團聚、與被記住的滋味。</p>
-              <p>把祝福送進彼此的生活裡，讓每一次相遇，都多一點份量。</p>
-              <div class="interactive-card-tags">
-              <span class="tag">海風</span>
-              <span class="tag">收成</span>
-              <span class="tag">豐足</span>
-              <span class="tag">相逢</span>
-            </div>
-            </div>
-          </div>
-          <div class="interactive-card-item">
-            <div class="interactive-card-img-wrap" tabindex="0" role="button" aria-label="點擊翻面">
-              <div class="interactive-card-inner">
-                <div class="card-face card-face--front">
-                  <img src="assets/images/card-social-frame.png" alt="透卡／拍照框 正面" width="240" height="320">
-                </div>
-                <div class="card-face card-face--back">
-                  <img src="assets/images/card-social-frame-back.png" alt="透卡／拍照框 背面" width="240" height="320">
-                </div>
-              </div>
-              <span class="card-flip-hint" aria-hidden="true">觸碰翻面</span>
-              <span class="card-flip-hint card-flip-hint--back" aria-hidden="true">觸碰翻回</span>
-            </div>
-            <h3 class="interactive-card-title">❸ 湯煙之禮｜溫暖與陪伴的祝福</h3>
-            <p class="interactive-card-subtitle">（對應：綜合款）</p>
-            <div class="interactive-card-desc">
-              <p>像礁溪溫泉升起的白煙，柔軟地包覆旅人與街道。</p>
-              <p>這是一份最貼近日常的祝福——不張揚，但始終在身邊。</p>
-              <p>象徵著陪伴、安心、與被接住的感受。就像一份什麼時候打開，都剛剛好的溫度。</p>
-              <div class="interactive-card-tags">
-              <span class="tag">溫泉煙氣</span>
-              <span class="tag">療癒</span>
-              <span class="tag">包覆</span>
-              <span class="tag">安心</span>
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider" aria-hidden="true">
-      <img src="assets/images/section-divider.png" alt="" width="320" height="32">
-    </div>
-
-    <!-- Section 03: Souvenir Map -->
+    <!-- Section 02: Souvenir Map -->
     <section class="section" id="souvenir-map">
-      <span class="section-num" aria-hidden="true">03</span>
+      <span class="section-num" aria-hidden="true">02</span>
       <h2 class="section-title">奶油麵包店指引設計</h2>
       <div class="section-content">
-        <p class="map-subtitle">循著麵包香，走進 Bread & Butter Bakery</p>
+        <p class="map-subtitle">循著麵包香，走進 Bread & Butter</p>
         <div class="map-carousel" aria-label="伴手禮地圖輪播">
           <div class="map-carousel-track">
             <div class="map-carousel-slide">
@@ -294,9 +260,9 @@
       <img src="assets/images/section-divider.png" alt="" width="320" height="32">
     </div>
 
-    <!-- Section 04: Key Visual -->
+    <!-- Section 03: Key Visual -->
     <section class="section section-alt" id="key-visual">
-      <span class="section-num" aria-hidden="true">04</span>
+      <span class="section-num" aria-hidden="true">03</span>
       <h2 class="section-title">大型看板製作</h2>
       <div class="section-content">
         <div class="kv-mockup">
@@ -340,23 +306,18 @@
                 <td class="price">$11,000</td>
               </tr>
               <tr>
-                <td>2. 禮盒互動小卡 (3款)</td>
-                <td>包含「A款」、「Ｂ款」、「Ｃ款」三款版面設計</td>
-                <td class="price">$7,500</td>
-              </tr>
-              <tr>
-                <td>3. 伴手禮指引地圖 + 地貼設計</td>
+                <td>2. 伴手禮指引地圖 + 地貼設計</td>
                 <td>手繪風格地圖繪製、景點整合、地貼設計</td>
                 <td class="price">$6,000</td>
               </tr>
               <tr>
-                <td>4. 大型看板製作</td>
+                <td>3. 大型看板製作</td>
                 <td>戶外看板視覺與製作</td>
                 <td class="price">$5,000</td>
               </tr>
               <tr class="total-row">
                 <td colspan="2">總計 (Total)</td>
-                <td class="price">$28,500</td>
+                <td class="price">$22,000</td>
               </tr>
             </tbody>
           </table>
@@ -414,7 +375,7 @@
             </div>
           </div>
           <div class="gantt-task">
-            <span class="gantt-task-name">互動小卡、指引地圖初稿</span>
+            <span class="gantt-task-name">指引地圖初稿</span>
             <div class="gantt-task-bar-wrap">
               <div class="gantt-task-bar" style="--start: 7; --len: 1;"></div>
               <span class="gantt-task-date">2/19</span>
@@ -479,10 +440,20 @@
 
     <!-- Footer -->
     <footer class="footer">
+      <div class="footer-deco footer-deco--r" aria-hidden="true">
+        <img src="assets/images/illus-1.png" alt="" width="72" height="72">
+      </div>
+      <div class="footer-deco footer-deco--l" aria-hidden="true">
+        <img src="assets/images/illus-2.png" alt="" width="68" height="68">
+      </div>
       <p class="footer-zh">讓山嵐包圍生活，讓麥香溫暖記憶。</p>
       <p class="footer-quote">Mist-shrouded life, bread-scented memories.</p>
     </footer>
   </main>
   <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, offset: 80, duration: 1000 });
+  </script>
 </body>
 </html>

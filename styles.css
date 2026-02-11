@@ -18,6 +18,7 @@
   --burnt-butter: #C4A35A;
   --misty-blue: #7B9AA8;
   --kraft-brown: #8B7355;
+  --sage-green: #97A38F;
 
   /* 版面 */
   --max-width: 720px;
@@ -100,10 +101,10 @@ body.entrance-visible {
 }
 
 .entrance-brand {
-  font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 3.5vw, 1.35rem);
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(1.6rem, 4.5vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
   color: #fff;
   margin: 0 0 0.35em;
 }
@@ -149,54 +150,143 @@ main {
   z-index: 1;
 }
 
-/* ----- Hero ----- */
+/* ----- 頂部導覽列（極簡風格） ----- */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  mix-blend-mode: multiply;
+}
+
+.site-nav-logo {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--kraft-brown);
+}
+
+/* ----- Hero（新版：復刻設計圖風格） ----- */
 .hero {
   position: relative;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--space-lg) var(--space);
+  text-align: center;
+  padding: 80px var(--space) var(--space-lg);
   overflow: hidden;
 }
 
-.hero-bg {
-  position: absolute;
-  inset: 0;
+.hero--new {
   background-color: var(--cream);
-  background-image:
-    linear-gradient(160deg, rgba(248,245,240,0.94) 0%, rgba(242,237,230,0.9) 50%, rgba(248,245,240,0.92) 100%),
-    url("https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1920&q=80") center/cover no-repeat;
-  will-change: transform;
-  transform: translateZ(0);
-  backface-visibility: hidden;
 }
 
-.hero-content {
+/* Hero 插畫點綴（迷迭香） */
+.hero-deco {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.hero-deco img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-deco--tr {
+  top: 1.5rem;
+  right: 1.5rem;
+  width: clamp(60px, 12vw, 100px);
+}
+
+.hero-deco--bl {
+  bottom: 2rem;
+  left: 1rem;
+  width: clamp(50px, 10vw, 90px);
+  transform: scaleX(-1) rotate(-8deg);
+}
+
+.hero-deco--tl {
+  top: 1.25rem;
+  left: 1rem;
+  width: clamp(55px, 11vw, 95px);
+  transform: rotate(5deg);
+  opacity: 0.5;
+}
+
+.hero--new .hero-content {
   position: relative;
   z-index: 1;
   max-width: var(--max-width);
   text-align: center;
 }
 
-/* Hero 由左至右進場動態（初始隱藏） */
-.hero .hero-anim {
-  opacity: 0;
-  transform: translateX(-40px);
-  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.hero .hero-brand.hero-anim { transition-delay: 0s; }
-.hero .hero-eyebrow.hero-anim { transition-delay: 0.1s; }
-.hero .hero-img.hero-anim { transition-delay: 0.15s; }
-.hero .hero-title.hero-anim { transition-delay: 0.2s; }
-.hero .hero-tagline.hero-anim { transition-delay: 0.32s; }
-.hero .hero-intro.hero-anim { transition-delay: 0.44s; }
-.hero.is-visible .hero-anim {
-  opacity: 1;
-  transform: translateX(0);
+.hero--new .hero-eng-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.85rem;
+  letter-spacing: 0.02em;
+  color: #C9A66B;
+  text-transform: none;
+  margin-bottom: 0.5rem;
 }
 
+.hero--new .hero-sub {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: #999;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.hero--new .hero-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1rem auto 2rem;
+  display: block;
+  filter: sepia(0.2) contrast(0.9);
+}
+
+.hero--new .hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 3vw, 1.35rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  margin: 0 0 0.5rem;
+}
+
+.hero--new .hero-tagline {
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  color: var(--misty-blue);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.hero--new .hero-desc {
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  color: #888;
+  line-height: 2;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 保留舊 Hero 樣式供其他區塊參考（.hero-brand 等仍可能被共用） */
 .hero-brand {
   font-family: var(--font-serif);
   font-size: 1.1rem;
@@ -252,6 +342,179 @@ main {
 
 .hero-intro p:last-child {
   margin-bottom: 0;
+}
+
+/* ----- 品牌故事：三張 Card 說故事 ----- */
+.brand-story {
+  position: relative;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.brand-story-deco {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.brand-story-deco img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-story-deco--r {
+  right: 0.5rem;
+  width: clamp(50px, 10vw, 80px);
+}
+
+.brand-story-deco--l {
+  left: 0.5rem;
+  width: clamp(45px, 9vw, 75px);
+  opacity: 0.48;
+}
+
+.brand-story-deco--l img {
+  transform: scaleX(-1);
+}
+
+.brand-story-inner {
+  max-width: calc(var(--max-width) + 4rem);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Card 1 & 2：焦糖金框、米色底，文字置中同 Card 3 */
+.story-card {
+  position: relative;
+  margin: 0;
+  border: 1px solid rgba(196, 163, 90, 0.45);
+  border-radius: 8px;
+  background: rgba(248, 245, 240, 0.95);
+  padding: 2rem 2.25rem;
+  box-shadow: 0 2px 12px rgba(45, 56, 50, 0.06);
+  text-align: center;
+}
+
+.story-card-num {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgba(45, 56, 50, 0.2);
+  letter-spacing: 0.05em;
+}
+
+.story-card-num--light {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.story-card-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 3.5vw, 1.75rem);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--kraft-brown);
+  margin: 0 0 1.25rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.story-card-body {
+  max-width: 36em;
+  margin: 0 auto;
+}
+
+.story-card-body p {
+  font-size: 1rem;
+  line-height: 2.1;
+  color: var(--text-muted);
+  margin: 0 0 1.25rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.story-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* 首字放大（置中版：不 float，維持視覺置中） */
+.story-drop-cap::first-letter {
+  font-family: var(--font-serif);
+  font-size: 3.2rem;
+  line-height: 0.85;
+  margin-right: 0.2rem;
+  color: var(--burnt-butter);
+}
+
+/* 引言句（斜體、焦糖色，置中時保留左線裝飾） */
+.story-quote {
+  font-style: italic;
+  color: var(--burnt-butter) !important;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent-light);
+  display: inline-block;
+  text-align: left;
+}
+
+/* Card 3：同為 Card 版型，但沿用迷霧藍色系 */
+.story-card--vision {
+  background: var(--misty-blue);
+  border-color: rgba(123, 154, 168, 0.7);
+  text-align: center;
+}
+
+.story-card--vision .story-card-body {
+  max-width: 28em;
+  margin: 0 auto;
+}
+
+.story-card--vision .story-card-body p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.story-card-title--light {
+  color: #fff;
+  font-size: clamp(1.35rem, 3.5vw, 1.7rem);
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  padding-bottom: 1rem;
+  display: inline-block;
+}
+
+.story-card-body--light p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+  .brand-story-inner {
+    padding: 2rem 1.25rem;
+    gap: 1.25rem;
+  }
+  .story-card {
+    padding: 1.5rem 1.25rem;
+  }
+  .story-card-title {
+    letter-spacing: 0.08em;
+  }
+  .story-drop-cap::first-letter {
+    font-size: 2.6rem;
+  }
+  .story-card--vision {
+    padding: 3rem 1.25rem;
+  }
 }
 
 /* ----- 區塊間法式花紋分隔（可置換圖檔 assets/images/section-divider.png） ----- */
@@ -386,6 +649,219 @@ main {
 @media (max-width: 768px) {
   .logo-concept-cards {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ----- 01 品牌核心三環圖 Venn ----- */
+.logo-concept-venn {
+  margin: 2.5rem 0;
+}
+
+.venn-heading {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 0 0 1.5rem;
+}
+
+.venn-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 520px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.venn-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  max-width: 85vw;
+  max-height: 85vw;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, mix-blend-mode 0.4s ease, opacity 0.4s ease;
+  mix-blend-mode: multiply;
+  backdrop-filter: blur(2px);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+}
+
+.venn-circle:hover {
+  transform: scale(1.05);
+  z-index: 15;
+  mix-blend-mode: normal;
+  opacity: 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* 三環對應色彩計畫：迷霧藍、大地棕、焦糖金 */
+.venn-circle--top {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(123, 154, 168, 0.75);
+}
+
+.venn-circle--top:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+.venn-circle--left {
+  bottom: 0;
+  left: 0;
+  background-color: rgba(139, 115, 85, 0.75);
+}
+
+.venn-circle--right {
+  bottom: 0;
+  right: 0;
+  background-color: rgba(196, 163, 90, 0.75);
+}
+
+.venn-circle-content {
+  color: #fff;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.venn-icon {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: 0.75rem;
+  opacity: 0.95;
+}
+
+.venn-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.1em;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.venn-circle-content p {
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+  line-height: 1.6;
+  opacity: 0.95;
+  font-family: "Lato", sans-serif;
+  max-width: 200px;
+  margin: 0;
+  font-weight: 300;
+}
+
+.venn-brand-core {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  text-align: center;
+  width: 160px;
+  pointer-events: none;
+}
+
+.venn-core-label {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.35rem;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.venn-core-title {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.6rem 0.5rem;
+  border-radius: 50%;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  line-height: 1.35;
+}
+
+/* Venn RWD：小螢幕改為垂直堆疊、重疊 */
+@media (max-width: 768px) {
+  .logo-concept-venn {
+    margin: 2rem 0;
+  }
+
+  .venn-container {
+    height: auto;
+    min-height: 520px;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 2rem;
+  }
+
+  .venn-circle {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: 240px;
+    height: 240px;
+    max-width: 80vw;
+    max-height: 80vw;
+    margin-bottom: -50px;
+  }
+
+  .venn-circle:first-of-type {
+    margin-top: 0;
+  }
+
+  .venn-circle:hover {
+    transform: scale(1.03) !important;
+  }
+
+  .venn-circle--top:hover {
+    transform: scale(1.03) !important;
+  }
+
+  .venn-brand-core {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: -20px;
+    margin-bottom: 1rem;
+    z-index: 25;
+  }
+}
+
+@media (max-width: 480px) {
+  .venn-circle {
+    width: 220px;
+    height: 220px;
+    margin-bottom: -45px;
+  }
+
+  .venn-circle-content p {
+    max-width: 180px;
   }
 }
 
@@ -1136,10 +1612,37 @@ main {
 
 /* ----- Footer ----- */
 .footer {
+  position: relative;
   text-align: center;
   padding: var(--space-lg) var(--space);
   background: var(--misty-blue);
   color: #fff;
+}
+
+.footer-deco {
+  position: absolute;
+  bottom: 0.75rem;
+  width: 72px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.footer-deco img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.footer-deco--r {
+  right: 1.25rem;
+}
+
+.footer-deco--l {
+  left: 1.25rem;
+  width: 68px;
+  opacity: 0.3;
 }
 
 .footer-zh {
@@ -1164,12 +1667,30 @@ main {
 
 /* 平板以下 */
 @media (max-width: 768px) {
+  .site-nav {
+    padding: 1.25rem 1.25rem;
+    justify-content: center;
+  }
+
   .hero {
     padding: 2rem 1rem;
     min-height: auto;
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
+
+  .hero--new .hero-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-deco--tr { width: 56px; top: 1rem; right: 1rem; }
+  .hero-deco--bl { width: 48px; bottom: 1.5rem; left: 0.5rem; }
+  .hero-deco--tl { width: 50px; top: 0.75rem; left: 0.5rem; }
+  .brand-story-deco--r { display: none; }
+  .brand-story-deco--l { display: none; }
+  .footer-deco--r { width: 56px; opacity: 0.28; }
+  .footer-deco--l { width: 52px; opacity: 0.24; }
 
   .hero-title {
     font-size: clamp(1.75rem, 5vw, 2.25rem);
